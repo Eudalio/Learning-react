@@ -1,18 +1,18 @@
 const webpack = require('webpack')
 
 module.exports = {
-    entry: './ex/index.js',
+    entry: './ex/index.jsx',
     output: {
         path: __dirname + '/public',
         filename: './bundle.js'
     },
     devServer: {
         port: 8080,
-        contentBase: './public'
+        contentBase: './public',
     },
     module: {
         loaders: [{
-            test: /.jsx?$/,
+            test: /.jsx[?]?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
             query:{
